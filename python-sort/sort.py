@@ -1,3 +1,4 @@
+# This code is based on http://kitchingroup.cheme.cmu.edu/blog/2014/02/09/Sorting-fields-in-bibtex-entries
 import sys
 import bibtexparser
 import textwrap
