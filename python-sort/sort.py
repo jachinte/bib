@@ -1,7 +1,12 @@
+import sys
 import bibtexparser
 import textwrap
 
-with open('/Users/miguel/Development/repositories/jachinte-candidacy-2018/bibliography/main.bib', 'r') as bibfile:
+if len(sys.argv) != 2:
+  print("The path to the bibtex file was expected as argument")
+  exit(1)
+
+with open(sys.argv[1], 'r') as bibfile:
     bp = bibtexparser.load(bibfile)
     entries = bp.entries
 
