@@ -57,7 +57,7 @@ for entry in entries:
       if field in entry:
           s1 = '  {0} '.format(field.lower())
           s2 = fmt.format(entry[field])
-          s3 = '{0:11s}= {1}'.format(s1, s2)
+          s3 = '{0:14s}= {1}'.format(s1, s2)
           if wrap:
               # fill seems to remove trailing '\n'
               s3 = textwrap.fill(s3, subsequent_indent=' '*18, width=70) + '\n'
@@ -67,7 +67,7 @@ for entry in entries:
       if field in entry:
           s1 = '  {0} '.format(field.lower())
           s2 = entry[field]
-          s3 = '{0:11s}= {{{1}}},'.format(s1, s2) + '\n'
+          s3 = '{0:14s}= {{{1}}},'.format(s1, s2) + '\n'
           # s3 = textwrap.fill(s3, subsequent_indent=' '*18, width=70) + '\n'
           s += s3
 
