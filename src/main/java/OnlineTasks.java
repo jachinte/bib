@@ -362,15 +362,21 @@ public class OnlineTasks {
         this.webDriver.quit();
     }
 
-    // java -Dwebdriver.chrome.driver=libs/chromedriver -jar target/bibtex-abstract-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2>/dev/null
+    // java -Dwebdriver.chrome.driver=libs/Linux/chromedriver -jar target/bibtex-abstract-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2>/dev/null
     public static void main(String[] args)
         throws ObjectResolutionException, TokenMgrException, ParseException,
             IOException {
-        System.setProperty("webdriver.chrome.driver", "libs/chromedriver");
-        final File directory = new File("/Users/miguel/Development/repositories/jachinte-candidacy-2018/bibliography");
+        System.setProperty(
+        	"webdriver.chrome.driver",
+        	String.format(
+        		"libs/%s/chromedriver",
+        		System.getProperty("os.name")
+        	)
+        );
+        final File directory = new File("/home/miguel/Desktop");
         final File bibfile = new File(
             directory,
-            "main.bib"
+            "SEAMS.bib"
         );
         final OnlineTasks online = new OnlineTasks(bibfile);
 //        final OfflineTasks offline = new OfflineTasks();
