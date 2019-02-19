@@ -362,7 +362,7 @@ public class OnlineTasks {
         this.webDriver.quit();
     }
 
-    // java -Dwebdriver.chrome.driver=libs/Linux/chromedriver -jar target/bibtex-abstract-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2>/dev/null
+    // java -Dwebdriver.chrome.driver=libs/Linux/chromedriver -jar target/bib-0.0.1-SNAPSHOT-jar-with-dependencies.jar
     public static void main(String[] args)
         throws ObjectResolutionException, TokenMgrException, ParseException,
             IOException {
